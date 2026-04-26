@@ -1,0 +1,82 @@
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.page__heading h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.page__heading p {
+  margin-top: 6px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.page__heading {
+  margin-bottom: 30px; 
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a; 
+  color: #ffffff;
+}
+
+.page {
+  padding: 20px;
+}
+
+.page__heading {
+  margin-bottom: 20px;
+}
+
+.page__heading h1 {
+  margin-bottom: 5px;
+}
+
+.page__heading p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.card {
+  border: 1px solid #334155;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #1e293b;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #334155;
+  border-radius: 5px;
+  margin-top: 8px;
+  background-color: #0f172a;
+  color: white;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  background-color: #3a3a7a;
+  color: white; 
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #5050a0;
+}

@@ -1,0 +1,33 @@
+.navbar{
+    background-color: #13131f;
+    padding: 15px 20px;
+    border-bottom: 2px solid #2a2a4a;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__brand{
+    color: #c8c8e8;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.navbar__list{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.navbar__list a {
+    color: #e8e8f0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar__list a:hover{
+    color: #6060aa;
+}
