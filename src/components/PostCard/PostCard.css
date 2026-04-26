@@ -1,0 +1,48 @@
+.postcard {
+    background-color: #13131f;
+    border: 2px solid #2a2a4a;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.postcard__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.postcard__usuario {
+    color: #c8c8e8;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.postcard__contenido {
+    color: #e8e8f0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.postcard__acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.postcard__btn {
+    background-color: #1e1e2e;
+    border: 1px solid #2a2a4a;
+    color: #e8e8f0;
+    padding: 8px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postcard__btn:hover {
+    background-color: #6060aa;
+}
