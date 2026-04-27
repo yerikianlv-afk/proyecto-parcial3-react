@@ -6,17 +6,25 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
   const [mensaje, setMensaje] = useState("");
   const [mensajes, setMensajes] = useState([]);
 
+  if (!chatActivo || !usuarioActivo) return null;
+
   const chatKey =
     "chat_" +
     [usuarioActivo.user, chatActivo.username]
       .sort()
       .join("_");
 
+  // 🔥 CARGA SEGURA
   useEffect(() => {
-    const stored = localStorage.getItem(chatKey);
-    setMensajes(stored ? JSON.parse(stored) : []);
+    try {
+      const stored = localStorage.getItem(chatKey);
+      setMensajes(stored ? JSON.parse(stored) : []);
+    } catch (e) {
+      setMensajes([]);
+    }
   }, [chatKey]);
 
+  // 🔥 ENVIAR MENSAJE (ROBUSTO)
   const enviarMensaje = () => {
     if (!mensaje.trim()) return;
 
@@ -33,7 +41,11 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
     setMensajes(prev => {
       const updated = [...prev, nuevo];
 
-      localStorage.setItem(chatKey, JSON.stringify(updated));
+      try {
+        localStorage.setItem(chatKey, JSON.stringify(updated));
+      } catch (e) {
+        console.error("Error guardando chat:", e);
+      }
 
       return updated;
     });

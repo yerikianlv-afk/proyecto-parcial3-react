@@ -9,22 +9,22 @@ const SideMenu = () => {
       <ul className="sidemenu__list">
         <li>
           <NavLink to="/feed" className="sidemenu__item">
-            🏠 Inicio
+            Inicio
           </NavLink>
         </li>
         <li>
           <NavLink to="/explorar" className="sidemenu__item">
-            🔍 Explorar
+            Explorar
           </NavLink>
         </li>
         <li>
           <NavLink to="/perfil" className="sidemenu__item">
-            👤 Perfil
+            Perfil
           </NavLink>
         </li>
         <li>
           <NavLink to="/mensajes" className="sidemenu__item">
-            ✉️ Mensajes
+            Mensajes
           </NavLink>
         </li>
       </ul>

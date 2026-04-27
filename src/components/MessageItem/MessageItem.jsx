@@ -2,9 +2,9 @@ import "./MessageItem.css";
 
 function MessageItem({ text, sender, hora }) {
   return (
-    <div className={`message ${sender === "me" ? "me" : "other"}`}>
-      <p>{text}</p>
-      <span className="hora">{hora}</span>
+    <div className={`message ${sender}`}>
+      <div className="message-text">{text}</div>
+      <span className="message-time">{hora}</span>
     </div>
   );
 }

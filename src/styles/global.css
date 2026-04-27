@@ -2,53 +2,57 @@ body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
   letter-spacing: 0.2px;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: radial-gradient(circle at top, #0f172a, #020617);
   color: #ffffff;
 }
 
+/* PÁGINA BASE */
 .page {
-  padding: 25px;
+  padding: 28px;
 }
 
+/* TITULOS */
 .page__heading {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .page__heading h1 {
   margin-bottom: 6px;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
 }
 
 .page__heading p {
   margin-top: 4px;
-  line-height: 1.6;
   color: #94a3b8;
   font-size: 14px;
 }
 
+/* CARDS (MEJORADAS) */
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 16px;
-  border-radius: 12px;
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(8px);
-  margin-bottom: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.45);
+  backdrop-filter: blur(10px);
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
+  border-color: rgba(96, 96, 170, 0.4);
 }
 
+/* INPUTS */
 input {
   width: 100%;
   padding: 12px;
   border: 1px solid #334155;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 8px;
-  background-color: #020617;
+  background-color: #0b1220;
   color: white;
   transition: 0.2s;
 }
@@ -56,28 +60,31 @@ input {
 input:focus {
   outline: none;
   border-color: #6060aa;
-  box-shadow: 0 0 0 2px rgba(96, 96, 170, 0.2);
+  box-shadow: 0 0 0 3px rgba(96, 96, 170, 0.15);
 }
 
 input::placeholder {
   color: #64748b;
 }
 
+/* BOTONES (MENOS AGRESIVOS) */
 button {
   padding: 10px 14px;
   border: none;
-  background: linear-gradient(135deg, #3a3a7a, #5050a0);
+  background: linear-gradient(135deg, #3a3a7a, #4f46e5);
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
+/* LISTAS */
 .grid-cards {
   display: flex;
   flex-direction: column;

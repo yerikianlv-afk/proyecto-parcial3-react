@@ -1,46 +1,34 @@
 .mensajes-container {
   display: flex;
-  gap: 20px;
+  height: calc(100vh - 60px);
+  background: radial-gradient(circle at top, #0f172a, #0b1220);
+  overflow: hidden;
 }
 
-/* lista de chats */
-.chat-list {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.mensajes-container > div:first-child {
+  width: 280px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
 }
 
-.chat-item {
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: #1e293b;
-  color: white;
-  transition: 0.2s;
-}
-
-.chat-item:hover {
-  background-color: #334155;
-}
-
-/* chat principal */
 .mensajes-chat {
   flex: 1;
-  height: 400px;
   display: flex;
   flex-direction: column;
-
-  /* 🔥 ESTO ELIMINA EL BLANCO */
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 15px;
+  height: 100%;
+  overflow: hidden;
+  min-height: 0;
+  background: rgba(11, 18, 32, 0.4);
 }
 
-/* cuando no hay chat */
 .mensajes-vacio {
   color: #94a3b8;
-  text-align: center;
-  margin-top: 50px;
+  margin: auto;
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
 }

@@ -19,30 +19,31 @@
   position: absolute;
   left: 12px;
   font-size: 12px;
-  color: #6b7280;
+  color: #64748b;
   pointer-events: none;
 }
 
 .search-bar__input {
   width: 100%;
-  padding: 12px 35px 12px 38px;
-  background-color: #0f172a;
-  border: 1px solid #334155;
-  border-radius: 10px;
+  padding: 12px 38px 12px 38px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
   color: white;
   font-size: 14px;
-  transition: all 0.3s;
+  transition: 0.2s ease;
   box-sizing: border-box;
 }
 
 .search-bar__input:focus {
   outline: none;
-  border-color: #6060aa;
-  box-shadow: 0 0 0 2px rgba(96, 96, 170, 0.2);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: rgba(15, 23, 42, 1);
 }
 
 .search-bar__input::placeholder {
-  color: #6b7280;
+  color: #64748b;
 }
 
 .search-bar__clear {
@@ -50,40 +51,38 @@
   right: 10px;
   background: none;
   border: none;
-  color: #9ca3af;
+  color: #94a3b8;
   cursor: pointer;
   font-size: 12px;
-  padding: 0;
-  margin: 0;
-  width: auto;
 }
 
 .search-bar__clear:hover {
-  color: #e8e8f0;
-  background: none;
+  color: #e2e8f0;
 }
 
 .search-bar__submit {
-  padding: 12px 20px;
-  background-color: #6060aa;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s;
+  transition: 0.2s ease;
 }
 
 .search-bar__submit:hover {
-  background-color: #7070bb;
+  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
 .search-bar__resultados {
-  margin-top: 15px;
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
+  margin-top: 12px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .search-bar__lista {
@@ -93,15 +92,15 @@
 }
 
 .search-bar__item {
-  padding: 12px 15px;
-  border-bottom: 1px solid #334155;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   cursor: pointer;
-  transition: background-color 0.2s;
-  color: #e8e8f0;
+  transition: 0.2s ease;
+  color: #e2e8f0;
 }
 
 .search-bar__item:hover {
-  background-color: #2a3a5a;
+  background: rgba(99, 102, 241, 0.1);
 }
 
 .search-bar__item:last-child {
@@ -109,8 +108,8 @@
 }
 
 .search-bar__vacio {
-  padding: 20px;
+  padding: 18px;
   text-align: center;
-  color: #9ca3af;
+  color: #94a3b8;
   margin: 0;
 }

@@ -1,77 +1,89 @@
-.navbar{
-    background-color: #13131f;
-    padding: 15px 20px;
-    border-bottom: 2px solid #2a2a4a;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(19, 19, 31, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 14px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.navbar__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar__brand{
-    color: #c8c8e8;
-    font-size: 18px;
-    letter-spacing: 2px;
+.navbar__brand {
+  color: #e2e8f0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* navegación */
 .navbar__nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.navbar__list{
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.navbar__list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar__list a {
-    color: #e8e8f0;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.2s ease;
 }
 
-.navbar__list a:hover{
-    color: #6060aa;
+.navbar__list a:hover {
+  background: rgba(99, 102, 241, 0.12);
+  color: #e2e8f0;
 }
 
-/* usuario + logout */
 .navbar__user {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #e8e8f0;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  font-size: 14px;
 }
 
-/* avatar tipo inicial */
 .navbar__avatar {
-    width: 30px;
-    height: 30px;
-    background-color: #3a3a7a;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #3a3a7a, #6366f1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* botón salir */
 .navbar__user button {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3a3a7a;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .navbar__user button:hover {
-    background-color: #5050a0;
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
 }
