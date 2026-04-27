@@ -16,9 +16,16 @@
     letter-spacing: 2px;
 }
 
+/* navegación */
+.navbar__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar__list{
     display: flex;
-    gap: 15px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -26,8 +33,45 @@
     color: #e8e8f0;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.2s;
 }
 
 .navbar__list a:hover{
     color: #6060aa;
+}
+
+/* usuario + logout */
+.navbar__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e8e8f0;
+    font-size: 14px;
+}
+
+/* avatar tipo inicial */
+.navbar__avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #3a3a7a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* botón salir */
+.navbar__user button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a7a;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navbar__user button:hover {
+    background-color: #5050a0;
 }

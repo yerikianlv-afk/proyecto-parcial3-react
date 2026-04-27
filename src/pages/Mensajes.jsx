@@ -1,7 +1,28 @@
 import Navbar from "../components/Navbar/Navbar";
+import ChatList from "../components/ChatList/ChatList";
+import ChatWindow from "../components/ChatWindow/ChatWindow";
+import { useState, useEffect } from "react";
 import "./Mensajes.css";
 
 function Mensajes() {
+  const [chatActivo, setChatActivo] = useState(null);
+  const [usuarioActivo, setUsuarioActivo] = useState(null);
+
+  // 🔥 IMPORTANTE: SIEMPRE SINCRONIZAR AL ENTRAR
+  useEffect(() => {
+    const syncUser = () => {
+      const user = JSON.parse(localStorage.getItem("usuarioActivo"));
+      setUsuarioActivo(user);
+    };
+
+    syncUser();
+
+    window.addEventListener("storage", syncUser);
+    return () => window.removeEventListener("storage", syncUser);
+  }, []);
+
+  if (!usuarioActivo) return <p>Inicia sesión</p>;
+
   return (
     <>
       <Navbar />
@@ -12,13 +33,23 @@ function Mensajes() {
           <p>Chats y conversaciones</p>
         </div>
 
-        <div className="card">
-          <p>No tienes mensajes nuevos</p>
-        </div>
+        <div className="mensajes-container">
 
-        <div className="card">
-          <h3>Chat ejemplo</h3>
-          <p>Último mensaje...</p>
+          <ChatList onSelectChat={setChatActivo} />
+
+          <div className="mensajes-chat">
+            {chatActivo ? (
+              <ChatWindow
+                chatActivo={chatActivo}
+                usuarioActivo={usuarioActivo}
+              />
+            ) : (
+              <p className="mensajes-vacio">
+                Selecciona un chat
+              </p>
+            )}
+          </div>
+
         </div>
       </section>
     </>

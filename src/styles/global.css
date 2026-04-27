@@ -1,82 +1,92 @@
+/* BASE */
 body {
+  margin: 0;
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
   letter-spacing: 0.2px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #ffffff;
+}
+
+/* CONTENIDO */
+.page {
+  padding: 25px;
+}
+
+/* HEADINGS */
+.page__heading {
+  margin-bottom: 25px;
 }
 
 .page__heading h1 {
-  margin-bottom: 10px;
-  font-size: 28px;
+  margin-bottom: 6px;
+  font-size: 26px;
   font-weight: 600;
 }
 
 .page__heading p {
-  margin-top: 6px;
+  margin-top: 4px;
   line-height: 1.6;
-  color: #cbd5e1;
+  color: #94a3b8;
   font-size: 14px;
 }
 
-.page__heading {
-  margin-bottom: 30px; 
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0f172a; 
-  color: #ffffff;
-}
-
-.page {
-  padding: 20px;
-}
-
-.page__heading {
-  margin-bottom: 20px;
-}
-
-.page__heading h1 {
-  margin-bottom: 5px;
-}
-
-.page__heading p {
-  color: #cbd5e1;
-  font-size: 14px;
-}
-
+/* TARJETAS (AQUÍ ESTÁ LA MEJORA REAL) */
 .card {
-  border: 1px solid #334155;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(8px);
   margin-bottom: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
 }
 
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* INPUTS */
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #334155;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 8px;
-  background-color: #0f172a;
+  background-color: #020617;
   color: white;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6060aa;
+  box-shadow: 0 0 0 2px rgba(96, 96, 170, 0.2);
 }
 
 input::placeholder {
-  color: #94a3b8;
+  color: #64748b;
 }
 
+/* BOTONES */
 button {
   padding: 10px 14px;
   border: none;
-  background-color: #3a3a7a;
-  color: white; 
-  border-radius: 5px;
+  background: linear-gradient(135deg, #3a3a7a, #5050a0);
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 10px;
   transition: 0.2s;
 }
 
 button:hover {
-  background-color: #5050a0;
+  transform: scale(1.05);
+}
+
+/* POSTS */
+.grid-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

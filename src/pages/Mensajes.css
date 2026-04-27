@@ -1,5 +1,46 @@
+.mensajes-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* lista de chats */
 .chat-list {
+  width: 200px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.chat-item {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: white;
+  transition: 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #334155;
+}
+
+/* chat principal */
+.mensajes-chat {
+  flex: 1;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  /* 🔥 ESTO ELIMINA EL BLANCO */
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* cuando no hay chat */
+.mensajes-vacio {
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 50px;
 }

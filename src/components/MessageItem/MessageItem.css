@@ -1,16 +1,27 @@
 .message {
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 10px;
+  padding: 10px 14px;
+  border-radius: 18px;
   max-width: 60%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
-.me {
-  background-color: #4caf50;
+.message.me {
+  background-color: #005c4b;
   color: white;
-  margin-left: auto;
+  align-self: flex-end;
 }
 
-.other {
-  background-color: #e0e0e0;
+.message.other {
+  background-color: #202c33;
+  color: white;
+  align-self: flex-start;
+}
+
+.hora {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 5px;
+  text-align: right;
 }

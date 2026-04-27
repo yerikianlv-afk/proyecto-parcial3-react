@@ -1,17 +1,22 @@
+import { useState } from "react";
 import "./ChatList.css";
 
-function ChatList() {
-  const chats = [
-    { id: 1, name: "Juan" },
-    { id: 2, name: "Maria" },
-    { id: 3, name: "Pedro" },
-  ];
+const usuarios = [
+  { username: "yerik" },
+  { username: "carlos" },
+  { username: "christian" }
+];
 
+function ChatList({ onSelectChat }) {
   return (
     <div className="chat-list">
-      {chats.map((chat) => (
-        <div key={chat.id} className="chat-item">
-          {chat.name}
+      {usuarios.map((user) => (
+        <div
+          key={user.username}
+          className="chat-item"
+          onClick={() => onSelectChat(user)}
+        >
+          {user.username}
         </div>
       ))}
     </div>
