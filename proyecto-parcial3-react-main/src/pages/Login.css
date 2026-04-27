@@ -1,0 +1,58 @@
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.login-card {
+  width: 320px;
+  padding: 28px;
+  background-color: #1e293b;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.login-card h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.login-card p {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.login-card label {
+  width: 100%;
+  display: block;
+}
+
+.login-card input {
+  width: 100%;
+  display: block;
+  box-sizing: border-box; /* CLAVE para evitar desplazamientos raros */
+}
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #3a3a7a;
+  color: white;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.login-card button:hover {
+  background-color: #5050a0;
+}
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+.authcard {
+    background-color: #13131f;
+    border: 2px solid #2a2a4a;
+     padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.authcard__title {
+    color: #c8c8e8;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.authcard__input {
+    background-color: #1e1e2e;
+    border: 1px solid #2a2a4a;
+    color: #e8e8f0;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.authcard__btn {
+    background-color: #6060aa;
+    color: #e8e8f0;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.authcard__btn:hover {
+    background-color: #7070bb;
+}
