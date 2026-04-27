@@ -1,6 +1,6 @@
 import "./Feed.css";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 const Feed = () => {
   const [publicaciones, setPublicaciones] = useState([]);
