@@ -14,7 +14,6 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
       .sort()
       .join("_");
 
-  // 🔥 CARGA SEGURA
   useEffect(() => {
     try {
       const stored = localStorage.getItem(chatKey);
@@ -24,7 +23,6 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
     }
   }, [chatKey]);
 
-  // 🔥 ENVIAR MENSAJE (ROBUSTO)
   const enviarMensaje = () => {
     if (!mensaje.trim()) return;
 
