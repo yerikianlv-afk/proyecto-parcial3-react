@@ -1,0 +1,13 @@
+.chat-list {
+  width: 200px;
+  border-right: 1px solid #ccc;
+}
+
+.chat-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chat-item:hover {
+  background-color: #f0f0f0;
+}

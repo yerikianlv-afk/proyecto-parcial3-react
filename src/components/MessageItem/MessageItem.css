@@ -1,0 +1,16 @@
+.message {
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: 60%;
+}
+
+.me {
+  background-color: #4caf50;
+  color: white;
+  margin-left: auto;
+}
+
+.other {
+  background-color: #e0e0e0;
+}
