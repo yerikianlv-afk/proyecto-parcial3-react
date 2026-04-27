@@ -1,4 +1,3 @@
-/* BASE */
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
@@ -7,12 +6,10 @@ body {
   color: #ffffff;
 }
 
-/* CONTENIDO */
 .page {
   padding: 25px;
 }
 
-/* HEADINGS */
 .page__heading {
   margin-bottom: 25px;
 }
@@ -30,7 +27,6 @@ body {
   font-size: 14px;
 }
 
-/* TARJETAS (AQUÍ ESTÁ LA MEJORA REAL) */
 .card {
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 16px;
@@ -46,7 +42,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* INPUTS */
 input {
   width: 100%;
   padding: 12px;
@@ -68,7 +63,6 @@ input::placeholder {
   color: #64748b;
 }
 
-/* BOTONES */
 button {
   padding: 10px 14px;
   border: none;
@@ -84,7 +78,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* POSTS */
 .grid-cards {
   display: flex;
   flex-direction: column;

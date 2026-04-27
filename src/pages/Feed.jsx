@@ -39,12 +39,12 @@ const Feed = () => {
 
       <div className="feed-layout">
 
-        {/* 🔥 SIDEBAR (ESTO TE FALTABA) */}
+
         <aside className="feed-sidebar">
           <SideMenu />
         </aside>
 
-        {/* CONTENIDO */}
+
         <section className="page feed-content">
 
           <div className="page__heading">

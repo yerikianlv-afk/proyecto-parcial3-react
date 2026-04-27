@@ -8,7 +8,6 @@ function Mensajes() {
   const [chatActivo, setChatActivo] = useState(null);
   const [usuarioActivo, setUsuarioActivo] = useState(null);
 
-  // 🔥 IMPORTANTE: SIEMPRE SINCRONIZAR AL ENTRAR
   useEffect(() => {
     const syncUser = () => {
       const user = JSON.parse(localStorage.getItem("usuarioActivo"));

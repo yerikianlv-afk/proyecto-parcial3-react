@@ -22,7 +22,7 @@ function Perfil() {
           <p>Información del usuario</p>
         </div>
 
-        {/* Header completo */}
+       
         <ProfileHeader
           nombre={usuario?.user}
           username={usuario?.user}
@@ -35,7 +35,7 @@ function Perfil() {
           onConfiguracion={() => alert("Configuración")}
         />
 
-        {/* Publicaciones */}
+        
         <div className="grid-cards">
           {misPosts.length === 0 ? (
             <p>No tienes publicaciones aún</p>

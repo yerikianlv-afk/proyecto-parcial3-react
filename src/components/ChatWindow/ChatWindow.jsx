@@ -12,13 +12,11 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
       .sort()
       .join("_");
 
-  // 🔥 cargar mensajes
   useEffect(() => {
     const stored = localStorage.getItem(chatKey);
     setMensajes(stored ? JSON.parse(stored) : []);
   }, [chatKey]);
 
-  // 🔥 ENVIAR MENSAJE (AQUÍ ESTÁ EL FIX REAL)
   const enviarMensaje = () => {
     if (!mensaje.trim()) return;
 
@@ -35,7 +33,6 @@ function ChatWindow({ chatActivo, usuarioActivo }) {
     setMensajes(prev => {
       const updated = [...prev, nuevo];
 
-      // 🔥 GUARDADO INMEDIATO (NO DEPENDE DE useEffect)
       localStorage.setItem(chatKey, JSON.stringify(updated));
 
       return updated;

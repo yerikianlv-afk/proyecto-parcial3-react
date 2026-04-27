@@ -31,7 +31,6 @@ const PostCard = ({ usuario, contenido }) => {
         </button>
       </div>
 
-      {/* comentarios */}
       <div className="postcard__comentarios">
         {comentarios.map((c, i) => (
           <p key={i} className="postcard__comentario">{c}</p>
