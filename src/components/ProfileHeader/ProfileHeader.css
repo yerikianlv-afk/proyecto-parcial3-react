@@ -44,7 +44,6 @@
   border: 3px solid #0b1220;
 }
 
-/* INFO */
 .profile-header__info {
   flex: 1;
 }
@@ -72,7 +71,6 @@
   font-size: 14px;
 }
 
-/* BOTONES */
 .profile-header__acciones {
   display: flex;
   gap: 8px;
@@ -98,7 +96,6 @@
   border: none;
 }
 
-/* ESTADÍSTICAS */
 .profile-header__estadisticas {
   display: flex;
   gap: 18px;
