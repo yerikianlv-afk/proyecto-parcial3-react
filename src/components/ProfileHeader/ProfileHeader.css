@@ -7,13 +7,11 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* PORTADA */
 .profile-header__portada {
   height: 140px;
   background: linear-gradient(135deg, #4f46e5, #6366f1);
 }
 
-/* CONTENIDO */
 .profile-header__contenido {
   display: flex;
   gap: 18px;
@@ -21,7 +19,6 @@
   align-items: flex-start;
 }
 
-/* AVATAR */
 .profile-header__avatar {
   margin-top: -50px;
 }

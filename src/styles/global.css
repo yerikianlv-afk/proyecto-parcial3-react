@@ -6,12 +6,10 @@ body {
   color: #ffffff;
 }
 
-/* PÁGINA BASE */
 .page {
   padding: 28px;
 }
 
-/* TITULOS */
 .page__heading {
   margin-bottom: 22px;
 }
@@ -28,7 +26,6 @@ body {
   font-size: 14px;
 }
 
-/* CARDS (MEJORADAS) */
 .card {
   border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 16px;
@@ -45,7 +42,6 @@ body {
   border-color: rgba(96, 96, 170, 0.4);
 }
 
-/* INPUTS */
 input {
   width: 100%;
   padding: 12px;
@@ -67,7 +63,6 @@ input::placeholder {
   color: #64748b;
 }
 
-/* BOTONES (MENOS AGRESIVOS) */
 button {
   padding: 10px 14px;
   border: none;

@@ -40,7 +40,6 @@ function Explorar() {
           <p>Buscar usuarios</p>
         </div>
 
-        {/* 🔥 SearchBar reemplaza el input */}
         <div className="card">
           <SearchBar
             onSearch={handleSearch}
