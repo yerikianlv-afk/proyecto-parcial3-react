@@ -1,3 +1,4 @@
+import Usuarios from "../pages/Usuarios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "../pages/Login";
@@ -15,6 +16,9 @@ function AppRouter() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/explorar" element={<Explorar />} />
         <Route path="/mensajes" element={<Mensajes />} />
+
+        
+        <Route path="/usuarios" element={<Usuarios />} />
       </Routes>
     </BrowserRouter>
   );

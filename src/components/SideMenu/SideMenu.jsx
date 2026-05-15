@@ -26,6 +26,8 @@ const SideMenu = () => {
           <NavLink to="/mensajes" className="sidemenu__item">
             Mensajes
           </NavLink>
+
+          <Link to="/usuarios"> Usuarios </Link>
         </li>
       </ul>
     </div>
