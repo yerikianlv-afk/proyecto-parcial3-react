@@ -3,14 +3,38 @@ import { useEffect, useState } from "react";
 const Usuarios = () => {
 
   const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
 
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((respuesta) => respuesta.json())
-      .then((data) => {
+    const getUsuarios = async () => {
+
+      try {
+
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if (!response.ok) {
+          throw new Error("No se pudieron obtener los usuarios");
+        }
+
+        const data = await response.json();
+
         setUsuarios(data);
-      });
+
+      } catch (err) {
+
+        setError(err.message);
+
+      } finally {
+
+        setLoading(false);
+
+      }
+
+    };
+
+    getUsuarios();
 
   }, []);
 
@@ -19,22 +43,28 @@ const Usuarios = () => {
 
       <h1>Usuarios</h1>
 
-      {usuarios.map((usuario) => (
+      {loading && <p>Cargando usuarios...</p>}
 
-        <div
-          key={usuario.id}
-          className="card"
-        >
+      {error && <p>{error}</p>}
 
-          <h3>{usuario.name}</h3>
+      {!loading && !error && (
+        usuarios.map((usuario) => (
 
-          <p>{usuario.email}</p>
+          <div
+            key={usuario.id}
+            className="card"
+          >
 
-          <p>{usuario.phone}</p>
+            <h3>{usuario.name}</h3>
 
-        </div>
+            <p>{usuario.email}</p>
 
-      ))}
+            <p>{usuario.phone}</p>
+
+          </div>
+
+        ))
+      )}
 
     </div>
   );
