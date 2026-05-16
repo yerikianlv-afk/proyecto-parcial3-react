@@ -5,6 +5,13 @@ const Navbar = () => {
 
   const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
 
+  const links = [
+    { path: "/feed", label: "Inicio" },
+    { path: "/explorar", label: "Explorar" },
+    { path: "/perfil", label: "Perfil" },
+    { path: "/mensajes", label: "Mensajes" }
+  ];
+
   const logout = () => {
     localStorage.removeItem("usuarioActivo");
     window.location.href = "/";
@@ -18,10 +25,15 @@ const Navbar = () => {
 
         <nav className="navbar__nav">
           <ul className="navbar__list">
-            <li><NavLink to="/feed">Inicio</NavLink></li>
-            <li><NavLink to="/explorar">Explorar</NavLink></li>
-            <li><NavLink to="/perfil">Perfil</NavLink></li>
-            <li><NavLink to="/mensajes">Mensajes</NavLink></li>
+
+            {links.map((link, index) => (
+              <li key={index}>
+                <NavLink to={link.path}>
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+
           </ul>
         </nav>
 

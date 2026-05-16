@@ -2,33 +2,32 @@ import { NavLink } from "react-router-dom";
 import "./SideMenu.css";
 
 const SideMenu = () => {
+
+  const menuItems = [
+    { path: "/feed", label: "Inicio" },
+    { path: "/explorar", label: "Explorar" },
+    { path: "/perfil", label: "Perfil" },
+    { path: "/mensajes", label: "Mensajes" },
+    { path: "/usuarios", label: "Usuarios" }
+  ];
+
   return (
     <div className="sidemenu">
       <h3 className="sidemenu__title">Menú</h3>
 
       <ul className="sidemenu__list">
-        <li>
-          <NavLink to="/feed" className="sidemenu__item">
-            Inicio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/explorar" className="sidemenu__item">
-            Explorar
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/perfil" className="sidemenu__item">
-            Perfil
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/mensajes" className="sidemenu__item">
-            Mensajes
-          </NavLink>
 
-          <Link to="/usuarios"> Usuarios </Link>
-        </li>
+        {menuItems.map((item, index) => (
+          <li key={index}>
+            <NavLink
+              to={item.path}
+              className="sidemenu__item"
+            >
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
+
       </ul>
     </div>
   );
